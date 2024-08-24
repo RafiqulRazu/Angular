@@ -1,0 +1,25 @@
+{
+"customer":[
+        {  
+        "id": 1,  
+        "name": "Jack",  
+        "email": "jack@gmail.com",  
+        "phone": "657-5468"  
+        },  
+        {  
+        "id": 2,  
+        "name": "Peter",  
+        "email": "peter@gmail.com",  
+        "phone": "452-9790"  
+        },  
+        {  
+        "id": 3,  
+        "name": "Mary",  
+        "email": "mary@gmail.com",  
+        "phone": "256-6843"  
+        }
+    ]
+}
+
+  
+  

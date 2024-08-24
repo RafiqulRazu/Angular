@@ -1,0 +1,31 @@
+/* customer.component.css */
+.customer-container {
+    margin: 20px;
+  }
+  
+  .customer-form {
+    margin-bottom: 20px;
+  }
+  
+  .customer-form input {
+    margin-right: 10px;
+  }
+  
+  .customer-form button {
+    margin-left: 10px;
+  }
+  
+  .customer-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .customer-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .customer-list button {
+    margin-left: 10px;
+  }
+  
