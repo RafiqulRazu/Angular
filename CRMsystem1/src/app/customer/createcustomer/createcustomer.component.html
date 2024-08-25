@@ -1,0 +1,36 @@
+<!-- src/app/create-customer/create-customer.component.html -->
+
+<div class="container">
+    <h2>Create New Customer</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="customer.name" name="name" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="customer.email" name="email" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" [(ngModel)]="customer.phone" name="phone" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="company">Company:</label>
+        <input type="text" id="company" [(ngModel)]="customer.company" name="company" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="customer.status" name="status" class="form-control" required>
+          <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Create Customer</button>
+    </form>
+  </div>
+  

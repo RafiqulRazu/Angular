@@ -12,10 +12,10 @@
       </thead>
 
       <tbody>
-          <tr *ngFor="let location of customers |async">
-              <td>{{location.name}}</td>
-              <td>{{location.email}}</td>
-              <td>{{location.phone}}</td>
+          <tr *ngFor="let customer of customers |async">
+              <td>{{customer.name}}</td>
+              <td>{{customer.email}}</td>
+              <td>{{customer.phone}}</td>
               
               <td>
                   <button class="btn btn-warning m-1 p-1" (click)="updateCustomer(customers.id)">Edit</button>
