@@ -3,23 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule
 
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { CreateCustomerComponent } from './createcustomer/createcustomer.component';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { CreatecustomerComponent } from './customer/createcustomer/createcustomer.component';
+import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
     NavbarComponent,
-    CreateCustomerComponent
+    CreatecustomerComponent,
+    ViewcustomerComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule, // Add FormsModule here
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideHttpClient(
