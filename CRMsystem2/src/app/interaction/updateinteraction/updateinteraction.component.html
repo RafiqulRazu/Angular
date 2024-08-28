@@ -1,0 +1,32 @@
+<div class="container">
+    <h3 class="text-center mt-4 mb-3">Update Interaction</h3>
+</div>
+
+<div>
+    <form [formGroup]="interactionForm" (ngSubmit)="updateInteraction()">
+        <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <input type="text" class="form-control" id="type" formControlName="type">
+        </div>
+    
+        <div class="mb-3">
+            <label for="notes" class="form-label">Notes</label>
+            <input type="text" class="form-control" id="notes" formControlName="notes">
+        </div>
+    
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="text" class="form-control" id="date" formControlName="date">
+        </div>
+    
+        <div class="mb-3">
+            <label for="customer" class="form-label">Customer:</label>
+            <select id="customer" formControlName="customer" class="form-select">
+                <option *ngFor="let cus of customers" [ngValue]="cus">{{ cus.name }}</option>
+            </select>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Update Interaction</button>
+    </form>
+
+</div>

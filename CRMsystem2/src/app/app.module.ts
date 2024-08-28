@@ -11,6 +11,7 @@ import { UpdatecustomerComponent } from './updatecustomer/updatecustomer.compone
 import { RouterModule } from '@angular/router';
 import { CreateinteractionComponent } from './interaction/createinteraction/createinteraction.component';
 import { ViewinteractionComponent } from './interaction/viewinteraction/viewinteraction.component';
+import { UpdateinteractionComponent } from './interaction/updateinteraction/updateinteraction.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ViewinteractionComponent } from './interaction/viewinteraction/viewinte
     CreatecustomerComponent,
     UpdatecustomerComponent,
     CreateinteractionComponent,
-    ViewinteractionComponent
+    ViewinteractionComponent,
+    UpdateinteractionComponent
   ],
   imports: [
     BrowserModule,
