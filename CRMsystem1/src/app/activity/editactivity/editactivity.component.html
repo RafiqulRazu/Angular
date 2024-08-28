@@ -1,0 +1,104 @@
+<div class="container">
+    <h2>Update Activity</h2>
+    <form [formGroup]="activityForm" (ngSubmit)="updateActivity()">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select formControlName="type" class="form-control">
+          <option value="Call">Call</option>
+          <option value="Meeting">Meeting</option>
+          <option value="Email">Email</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="datetime-local" id="date" formControlName="date" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="customer">Customer</label>
+        <select formControlName="customer" class="form-control">
+          <option *ngFor="let customer of customers" [ngValue]="customer">
+            {{ customer.name }}
+          </option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="activityForm.invalid">Update Activity</button>
+    </form>
+  </div>
+  
+
+
+
+
+
+
+<!-- <div class="container">
+    <h2>Edit Activity</h2>
+    <form [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+      
+      <div>
+        <label for="type">Type</label>
+        <select formControlName="type" id="type">
+          <option value="Call">Call</option>
+          <option value="Meeting">Meeting</option>
+          <option value="Email">Email</option>
+          <option value="Task">Task</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="date">Date</label>
+        <input type="datetime-local" id="date" formControlName="date">
+      </div>
+  
+      <div>
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description"></textarea>
+      </div>
+  
+      
+      <div formGroupName="customer">
+        <h3>Customer Information</h3>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name">
+        </div>
+  
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email">
+        </div>
+  
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" formControlName="phone">
+        </div>
+  
+        <div>
+          <label for="company">Company</label>
+          <input id="company" type="text" formControlName="company">
+        </div>
+  
+        <div>
+          <label for="status">Status</label>
+          <select id="status" formControlName="status">
+            <option value="Lead">Lead</option>
+            <option value="Prospect">Prospect</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="activityForm.invalid">Save Changes</button>
+    </form>
+  </div>
+   -->

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../../model/customer.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../../service/customer.service';
 
 @Component({
@@ -9,33 +9,96 @@ import { CustomerService } from '../../service/customer.service';
   styleUrl: './viewcustomer.component.css'
 })
 export class ViewcustomerComponent implements OnInit{
-  customer: Customer | null = null;
-  isLoading = true;
-  error: string | null = null;
+
+
+  customers: Customer[] = [];
 
   constructor(
-    private route: ActivatedRoute,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    if (id) {
-      this.customerService.getCustomerById(id).subscribe({
-        next: (data) => {
-          this.customer = data;
-          this.isLoading = false;
+    this.loadCustomers();
+  }
+
+  // loadCustomers(): void {
+  //   this.customerService.getCustomers().subscribe(
+  //     (data: Customer[]) => {
+  //       this.customers = data;
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching customers:', error);
+  //     }
+  //   );
+  // }
+
+
+  loadCustomers(): void {
+    console.log('Attempting to load customers...');
+    this.customerService.getCustomers().subscribe({
+      next: (data: Customer[]) => {
+        console.log('Successfully fetched customers:', data);
+        this.customers = data;
+      },
+      error: (error) => {
+        console.error('Error fetching customers:', error);
+      }
+    });
+  }
+
+  editCustomer(id: number): void {
+    this.router.navigate(['updatecustomer', id]);
+  }
+
+
+  deleteCustomer(id: number): void {
+    console.log(`Attempting to delete customer with ID: ${id}`);
+    if (confirm('Are you sure you want to delete this customer?')) {
+      this.customerService.deleteCustomer(id).subscribe({
+        next: () => {
+          console.log(`Successfully deleted customer with ID: ${id}`);
+          this.customers = this.customers.filter(customer => customer.id !== id);
         },
-        error: (err) => {
-          this.error = 'Failed to load customer details';
-          this.isLoading = false;
-          console.error(err);
+        error: (error) => {
+          console.error('Error deleting customer:', error);
         }
       });
-    } else {
-      this.error = 'Invalid customer ID';
-      this.isLoading = false;
     }
   }
+  
+
+  // deleteCustomer(id: number): void {
+  //   if (confirm('Are you sure you want to delete this customer?')) {
+  //     this.customerService.deleteCustomer(id).subscribe(
+  //       () => {
+  //         console.log(`Customer with ID ${id} deleted successfully`);
+  //         this.customers = this.customers.filter(customer => customer.id !== id);
+  //       },
+  //       (error) => {
+  //         console.error('Error deleting customer:', error);
+  //       }
+  //     );
+  //   }
+  // }
+
+  
+  
+
+  // customers: Customer[] = [];
+
+  // constructor(private customerService: CustomerService) {}
+
+  // ngOnInit(): void {
+  //   this.customerService.getCustomers().subscribe(
+  //     (data: Customer[]) => {
+  //       this.customers = data;
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching customers:', error);
+  //     }
+  //   );
+  // }
+  
 
 }

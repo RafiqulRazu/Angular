@@ -1,454 +1,88 @@
 {
   "customer": [
     {
-      "id": "1",
-      "name": "John",
-      "email": "john@gmail.com",
-      "phone": "566-7345",
-      "company": "Nokia Inc.",
-      "createdAt": "2023-08-25T08:30:00.000Z",
-      "updatedAt": "2023-08-25T08:30:00.000Z",
-      "status": "Active"
-    },
-    {
-      "id": "2",
       "name": "Peter",
       "email": "johndoe@example.com",
       "phone": "426-7370",
       "company": "Apple Inc.",
-      "createdAt": "2024-08-25T08:30:00.000Z",
-      "updatedAt": "2024-08-25T08:30:00.000Z",
-      "status": "Inactive"
+      "status": "Prospect",
+      "id": "2",
+      "createdAt": null,
+      "updatedAt": "2024-08-28T00:34:09.223Z"
     },
     {
-      "id": "5f5f",
+      "id": "3",
       "name": "Razu",
       "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:55.946Z",
-      "updatedAt": "2024-08-25T08:07:55.946Z",
-      "status": "Prospect"
+      "phone": "543-6832",
+      "company": "bata",
+      "status": "Active",
+      "createdAt": "2024-08-27T19:44:09.012Z",
+      "updatedAt": "2024-08-27T19:44:09.012Z"
     },
     {
-      "id": "83b9",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:57.297Z",
-      "updatedAt": "2024-08-25T08:07:57.297Z",
-      "status": "Prospect"
+      "id": "0",
+      "name": "rafiqul",
+      "email": "cat@gmail.com",
+      "phone": "533-2359",
+      "company": "sony",
+      "status": "Inactive",
+      "createdAt": "2024-08-27T20:55:05.583Z",
+      "updatedAt": "2024-08-27T20:55:05.583Z"
     },
     {
-      "id": "14a9",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:58.234Z",
-      "updatedAt": "2024-08-25T08:07:58.234Z",
-      "status": "Prospect"
+      "id": "4d78",
+      "name": "johan",
+      "email": "johan@gmail.com",
+      "phone": "234-8655",
+      "company": "adidas",
+      "status": "Lead",
+      "createdAt": "2024-08-27T21:28:36.551Z",
+      "updatedAt": "2024-08-27T21:28:36.551Z"
     },
     {
-      "id": "03f1",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:59.370Z",
-      "updatedAt": "2024-08-25T08:07:59.370Z",
-      "status": "Prospect"
+      "id": "fbac",
+      "name": "cathrine",
+      "email": "cat@gmail.com",
+      "phone": "981-7523",
+      "company": "ytrg",
+      "status": "Lead",
+      "createdAt": "2024-08-27T22:07:03.792Z",
+      "updatedAt": "2024-08-27T22:07:03.792Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "1",
+      "type": "Call",
+      "date": "2024-08-27T10:30:00.000Z",
+      "description": "Discussed project requirements.",
+      "customer": {
+        "id": "fbac",
+        "name": "cathrine",
+        "email": "cat@gmail.com",
+        "phone": "981-7523",
+        "company": "ytrg",
+        "status": "Lead",
+        "createdAt": "2024-08-27T22:07:03.792Z",
+        "updatedAt": "2024-08-27T22:07:03.792Z"
+      }
     },
     {
-      "id": "2e27",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:59.617Z",
-      "updatedAt": "2024-08-25T08:07:59.617Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "82a1",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:07:59.849Z",
-      "updatedAt": "2024-08-25T08:07:59.849Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "5e67",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:00.058Z",
-      "updatedAt": "2024-08-25T08:08:00.058Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "96c1",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:00.274Z",
-      "updatedAt": "2024-08-25T08:08:00.274Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "8374",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:00.489Z",
-      "updatedAt": "2024-08-25T08:08:00.489Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "4e4f",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:00.714Z",
-      "updatedAt": "2024-08-25T08:08:00.714Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "67f7",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:01.930Z",
-      "updatedAt": "2024-08-25T08:08:01.930Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "9534",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:02.178Z",
-      "updatedAt": "2024-08-25T08:08:02.178Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "174c",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:02.434Z",
-      "updatedAt": "2024-08-25T08:08:02.434Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "9ca3",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:02.673Z",
-      "updatedAt": "2024-08-25T08:08:02.673Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "4165",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:02.874Z",
-      "updatedAt": "2024-08-25T08:08:02.874Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "378c",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:03.770Z",
-      "updatedAt": "2024-08-25T08:08:03.770Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "f49a",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:04.017Z",
-      "updatedAt": "2024-08-25T08:08:04.017Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "771c",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:04.225Z",
-      "updatedAt": "2024-08-25T08:08:04.225Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "1edd",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:04.409Z",
-      "updatedAt": "2024-08-25T08:08:04.409Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "6f66",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:04.810Z",
-      "updatedAt": "2024-08-25T08:08:04.810Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "b61e",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:05.026Z",
-      "updatedAt": "2024-08-25T08:08:05.026Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "321d",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:05.226Z",
-      "updatedAt": "2024-08-25T08:08:05.226Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "4368",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:05.450Z",
-      "updatedAt": "2024-08-25T08:08:05.450Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "5712",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:05.673Z",
-      "updatedAt": "2024-08-25T08:08:05.673Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "33aa",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:07.050Z",
-      "updatedAt": "2024-08-25T08:08:07.050Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "0f6d",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:07.721Z",
-      "updatedAt": "2024-08-25T08:08:07.721Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "d65c",
-      "name": "Razu",
-      "email": "razu@gmail.com",
-      "phone": "235-4572",
-      "company": "example",
-      "createdAt": "2024-08-25T08:08:07.978Z",
-      "updatedAt": "2024-08-25T08:08:07.978Z",
-      "status": "Prospect"
-    },
-    {
-      "id": "6363",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:11.495Z",
-      "updatedAt": "2024-08-25T08:25:11.495Z",
-      "status": "Active"
-    },
-    {
-      "id": "b96b",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:12.567Z",
-      "updatedAt": "2024-08-25T08:25:12.567Z",
-      "status": "Active"
-    },
-    {
-      "id": "e2f0",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:12.975Z",
-      "updatedAt": "2024-08-25T08:25:12.975Z",
-      "status": "Active"
-    },
-    {
-      "id": "fef0",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:13.239Z",
-      "updatedAt": "2024-08-25T08:25:13.239Z",
-      "status": "Active"
-    },
-    {
-      "id": "f0e1",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:13.463Z",
-      "updatedAt": "2024-08-25T08:25:13.463Z",
-      "status": "Active"
-    },
-    {
-      "id": "4ece",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:13.695Z",
-      "updatedAt": "2024-08-25T08:25:13.695Z",
-      "status": "Active"
-    },
-    {
-      "id": "bece",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:13.927Z",
-      "updatedAt": "2024-08-25T08:25:13.927Z",
-      "status": "Active"
-    },
-    {
-      "id": "8cd8",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:14.159Z",
-      "updatedAt": "2024-08-25T08:25:14.159Z",
-      "status": "Active"
-    },
-    {
-      "id": "043e",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:14.415Z",
-      "updatedAt": "2024-08-25T08:25:14.415Z",
-      "status": "Active"
-    },
-    {
-      "id": "90f1",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:14.703Z",
-      "updatedAt": "2024-08-25T08:25:14.703Z",
-      "status": "Active"
-    },
-    {
-      "id": "5cc7",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:14.975Z",
-      "updatedAt": "2024-08-25T08:25:14.975Z",
-      "status": "Active"
-    },
-    {
-      "id": "c9f9",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:15.663Z",
-      "updatedAt": "2024-08-25T08:25:15.663Z",
-      "status": "Active"
-    },
-    {
-      "id": "1bba",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:15.887Z",
-      "updatedAt": "2024-08-25T08:25:15.887Z",
-      "status": "Active"
-    },
-    {
-      "id": "204b",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:16.103Z",
-      "updatedAt": "2024-08-25T08:25:16.103Z",
-      "status": "Active"
-    },
-    {
-      "id": "5ff5",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:16.328Z",
-      "updatedAt": "2024-08-25T08:25:16.328Z",
-      "status": "Active"
-    },
-    {
-      "id": "c46e",
-      "name": "fjh",
-      "email": "jgfh@khj.ioh",
-      "phone": "365-4443",
-      "company": "hjgdf",
-      "createdAt": "2024-08-25T08:25:16.551Z",
-      "updatedAt": "2024-08-25T08:25:16.551Z",
-      "status": "Active"
+      "id": "4e50",
+      "type": "Meeting",
+      "date": "2024-08-28T06:03",
+      "description": "for official work",
+      "customer": {
+        "id": "fbac",
+        "name": "cathrine",
+        "email": "cat@gmail.com",
+        "phone": "981-7523",
+        "company": "ytrg",
+        "status": "Lead",
+        "createdAt": "2024-08-27T22:07:03.792Z",
+        "updatedAt": "2024-08-27T22:07:03.792Z"
+      }
     }
   ]
 }

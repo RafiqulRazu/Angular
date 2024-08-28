@@ -1,0 +1,62 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Activities List</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Customer Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let activity of activities">
+            <td>{{ activity.id }}</td>
+            <td>{{ activity.type }}</td>
+            <td>{{ activity.date | date: 'short' }}</td>
+            <td>{{ activity.description }}</td>
+            <td>{{ activity.customer.name }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm mr-2" (click)="editActivity(activity.id)">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteActivity(activity.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+
+<!-- <div class="container">
+    <h2>Activities List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Customer Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities">
+          <td>{{ activity.id }}</td>
+          <td>{{ activity.type }}</td>
+          <td>{{ activity.date | date: 'short' }}</td>
+          <td>{{ activity.description }}</td>
+          <td>{{ activity.customer.name }}</td>
+          <td>
+            <button (click)="editActivity(activity.id)">Edit</button>
+            <button (click)="deleteActivity(activity.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   -->

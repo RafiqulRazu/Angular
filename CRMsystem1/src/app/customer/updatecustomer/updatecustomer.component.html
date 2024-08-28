@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Update Customer</h2>
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" class="form-control"/>
+        <div *ngIf="customerForm.get('name')?.invalid && (customerForm.get('name')?.touched || customerForm.dirty)" class="error">
+          <div *ngIf="customerForm.get('name')?.errors?.['required']">Name is required.</div>
+          <div *ngIf="customerForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" class="form-control"/>
+        <div *ngIf="customerForm.get('email')?.invalid && (customerForm.get('email')?.touched || customerForm.dirty)" class="error">
+          <div *ngIf="customerForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="customerForm.get('email')?.errors?.['email']">Invalid email format.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input id="phone" formControlName="phone" type="text" class="form-control"/>
+        <div *ngIf="customerForm.get('phone')?.invalid && (customerForm.get('phone')?.touched || customerForm.dirty)" class="error">
+          <div *ngIf="customerForm.get('phone')?.errors?.['required']">Phone is required.</div>
+          <div *ngIf="customerForm.get('phone')?.errors?.['pattern']">Phone must be in the format 123-4567.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="company">Company:</label>
+        <input id="company" formControlName="company" type="text" class="form-control"/>
+        <div *ngIf="customerForm.get('company')?.invalid && (customerForm.get('company')?.touched || customerForm.dirty)" class="error">
+          <div *ngIf="customerForm.get('company')?.errors?.['required']">Company is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" formControlName="status" class="form-control">
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+          <option value="Prospect">Prospect</option>
+          <option value="Lead">Lead</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update Customer</button>
+      </div>
+    </form>
+  </div>
+  

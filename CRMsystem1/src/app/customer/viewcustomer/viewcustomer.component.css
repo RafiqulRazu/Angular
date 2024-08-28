@@ -1,8 +1,25 @@
-/* src/app/view-customer/view-customer.component.css */
+/* update the existing or add new CSS in the component's CSS file */
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
+  margin-top: 20px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+thead th {
+  text-align: center;
+}
+
+tbody td {
+  text-align: center;
+}
+
+.btn {
+  margin: 0;
+}
+
+.btn-warning {
+  margin-right: 5px; /* Space between Edit and Delete buttons */
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Customer } from '../../model/customer.model';
 import { CustomerService } from '../../service/customer.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-createcustomer',
@@ -9,26 +10,40 @@ import { Router } from '@angular/router';
   styleUrl: './createcustomer.component.css'
 })
 export class CreatecustomerComponent {
-  customer: Customer = new Customer();
-  statusOptions = ['Active', 'Inactive', 'Prospect', 'Lead']; // Options for status
+  customerForm: FormGroup;
 
-  constructor(private customerService: CustomerService, private router: Router) {}
-
-  onSubmit(): void {
-    this.customer.createdAt = new Date();
-    this.customer.updatedAt = new Date();
-    
-    this.customerService.createCustomer(this.customer).subscribe({
-      next: (response) => {
-        console.log('Customer created:', response);
-        this.router.navigate(['/customers']); // Navigate to the customer list or another route after creation
-      },
-      error: (error) => {
-        console.error('Error creating customer:', error);
-      }
+  constructor(
+    private fb: FormBuilder,
+    private customerService: CustomerService,
+    private router: Router
+  ) {
+    this.customerForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{3}-\d{4}$/)]],
+      company: ['', Validators.required],
+      status: ['Active', Validators.required]
     });
   }
 
+  onSubmit() {
+    if (this.customerForm.valid) {
+      const newCustomer: Omit<Customer, 'id'> = {
+        name: this.customerForm.value.name,
+        email: this.customerForm.value.email,
+        phone: this.customerForm.value.phone,
+        company: this.customerForm.value.company,
+        status: this.customerForm.value.status,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+
+      this.customerService.createCustomer(newCustomer).subscribe(() => {
+        this.router.navigate(['/customers']);
+      });
+    }
+  }
+  
 }
 
 

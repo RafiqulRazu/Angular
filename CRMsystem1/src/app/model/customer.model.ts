@@ -4,8 +4,8 @@ export class Customer {
     email!: string;
     phone!: string;
     company!: string;
+    status!: 'Active' | 'Inactive' | 'Prospect' | 'Lead';
     createdAt!: Date;
     updatedAt!: Date;
-    status!: 'Active' | 'Inactive' | 'Prospect' | 'Lead';
 
   }
