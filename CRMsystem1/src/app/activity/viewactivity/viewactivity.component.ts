@@ -33,7 +33,7 @@ export class ViewactivityComponent implements OnInit{
   }
 
   editActivity(id: number): void {
-    this.router.navigate(['/edit-activity', id]);
+    this.router.navigate(['/editactivity', id]);
   }
 
   deleteActivity(id: number): void {

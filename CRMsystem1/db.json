@@ -11,14 +11,14 @@
       "updatedAt": "2024-08-28T00:34:09.223Z"
     },
     {
-      "id": "3",
       "name": "Razu",
       "email": "razu@gmail.com",
       "phone": "543-6832",
       "company": "bata",
-      "status": "Active",
-      "createdAt": "2024-08-27T19:44:09.012Z",
-      "updatedAt": "2024-08-27T19:44:09.012Z"
+      "status": "Prospect",
+      "id": "3",
+      "createdAt": null,
+      "updatedAt": "2024-08-28T17:33:47.893Z"
     },
     {
       "id": "0",
@@ -83,6 +83,56 @@
         "createdAt": "2024-08-27T22:07:03.792Z",
         "updatedAt": "2024-08-27T22:07:03.792Z"
       }
+    },
+    {
+      "id": "bbdb",
+      "type": "Email",
+      "date": "2024-07-31T14:06",
+      "description": "important work",
+      "customer": {
+        "id": "4d78",
+        "name": "johan",
+        "email": "johan@gmail.com",
+        "phone": "234-8655",
+        "company": "adidas",
+        "status": "Lead",
+        "createdAt": "2024-08-27T21:28:36.551Z",
+        "updatedAt": "2024-08-27T21:28:36.551Z"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Rir",
+      "email": "r@g.com",
+      "role": "Agent",
+      "assignedCustomers": [],
+      "createdActivities": []
+    },
+    {
+      "id": 0,
+      "name": "Rir",
+      "email": "r@g.com",
+      "role": "Agent",
+      "assignedCustomers": [],
+      "createdActivities": []
+    },
+    {
+      "id": 0,
+      "name": "Rir",
+      "email": "r@g.com",
+      "role": "Agent",
+      "assignedCustomers": [],
+      "createdActivities": []
+    },
+    {
+      "id": 0,
+      "name": "Rir",
+      "email": "r@g.com",
+      "role": "Agent",
+      "assignedCustomers": [],
+      "createdActivities": []
     }
   ]
 }
