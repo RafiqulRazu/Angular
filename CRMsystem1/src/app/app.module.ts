@@ -15,7 +15,7 @@ import { ViewactivityComponent } from './activity/viewactivity/viewactivity.comp
 import { EditactivityComponent } from './activity/editactivity/editactivity.component';
 import { CreateuserComponent } from './user/createuser/createuser.component';
 import { ViewuserComponent } from './user/viewuser/viewuser.component';
-import { EdituserComponent } from './user/edituser/edituser.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { EdituserComponent } from './user/edituser/edituser.component';
     EditactivityComponent,
     CreateuserComponent,
     ViewuserComponent,
-    EdituserComponent,
+    
   ],
   imports: [
     BrowserModule,

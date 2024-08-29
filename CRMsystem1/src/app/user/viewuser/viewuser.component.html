@@ -1,1 +1,37 @@
-<p>viewuser works!</p>
+<div *ngIf="users.length > 0; else noUsers">
+    <h2>User List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Assigned Customers</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let customer of user.customers">
+                {{ customer.name }}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="editUser(user.id)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noUsers>
+    <p>No users available.</p>
+  </ng-template>
+  

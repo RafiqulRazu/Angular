@@ -1,34 +1,24 @@
 {
   "customer": [
     {
+      "id": "2",
       "name": "Peter",
       "email": "johndoe@example.com",
       "phone": "426-7370",
       "company": "Apple Inc.",
       "status": "Prospect",
-      "id": "2",
       "createdAt": null,
       "updatedAt": "2024-08-28T00:34:09.223Z"
     },
     {
+      "id": "3",
       "name": "Razu",
       "email": "razu@gmail.com",
       "phone": "543-6832",
       "company": "bata",
       "status": "Prospect",
-      "id": "3",
       "createdAt": null,
       "updatedAt": "2024-08-28T17:33:47.893Z"
-    },
-    {
-      "id": "0",
-      "name": "rafiqul",
-      "email": "cat@gmail.com",
-      "phone": "533-2359",
-      "company": "sony",
-      "status": "Inactive",
-      "createdAt": "2024-08-27T20:55:05.583Z",
-      "updatedAt": "2024-08-27T20:55:05.583Z"
     },
     {
       "id": "4d78",
@@ -49,6 +39,16 @@
       "status": "Lead",
       "createdAt": "2024-08-27T22:07:03.792Z",
       "updatedAt": "2024-08-27T22:07:03.792Z"
+    },
+    {
+      "id": "8612",
+      "name": "rafiqul",
+      "email": "cat@gmail.com",
+      "phone": "533-2359",
+      "company": "sony",
+      "status": "Lead",
+      "createdAt": "2024-08-29T11:25:03.408Z",
+      "updatedAt": "2024-08-29T11:25:03.408Z"
     }
   ],
   "activities": [
@@ -99,40 +99,52 @@
         "createdAt": "2024-08-27T21:28:36.551Z",
         "updatedAt": "2024-08-27T21:28:36.551Z"
       }
+    },
+    {
+      "id": "55bc",
+      "type": "Meeting",
+      "date": "2024-08-29T17:25",
+      "description": "rthrtyhrtef",
+      "customer": {
+        "id": "8612",
+        "name": "rafiqul",
+        "email": "cat@gmail.com",
+        "phone": "533-2359",
+        "company": "sony",
+        "status": "Lead",
+        "createdAt": "2024-08-29T11:25:03.408Z",
+        "updatedAt": "2024-08-29T11:25:03.408Z"
+      }
     }
   ],
   "users": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Rir",
       "email": "r@g.com",
       "role": "Agent",
-      "assignedCustomers": [],
-      "createdActivities": []
-    },
-    {
-      "id": 0,
-      "name": "Rir",
-      "email": "r@g.com",
-      "role": "Agent",
-      "assignedCustomers": [],
-      "createdActivities": []
-    },
-    {
-      "id": 0,
-      "name": "Rir",
-      "email": "r@g.com",
-      "role": "Agent",
-      "assignedCustomers": [],
-      "createdActivities": []
-    },
-    {
-      "id": 0,
-      "name": "Rir",
-      "email": "r@g.com",
-      "role": "Agent",
-      "assignedCustomers": [],
-      "createdActivities": []
+      "customer": [
+        {
+          "id": 101,
+          "name": "Customer 1",
+          "email": "customer1@example.com",
+          "phone": "555-1234",
+          "company": "Company A",
+          "status": "Active",
+          "createdAt": "2023-01-01T00:00:00Z",
+          "updatedAt": "2023-01-01T00:00:00Z"
+        },
+        {
+          "id": 102,
+          "name": "Customer 2",
+          "email": "customer2@example.com",
+          "phone": "555-5678",
+          "company": "Company B",
+          "status": "Inactive",
+          "createdAt": "2023-02-01T00:00:00Z",
+          "updatedAt": "2023-02-01T00:00:00Z"
+        }
+      ]
     }
   ]
 }

@@ -6,7 +6,9 @@ import { UpdatecustomerComponent } from './customer/updatecustomer/updatecustome
 import { CreateactivityComponent } from './activity/createactivity/createactivity.component';
 import { ViewactivityComponent } from './activity/viewactivity/viewactivity.component';
 import { EditactivityComponent } from './activity/editactivity/editactivity.component';
+import { ViewuserComponent } from './user/viewuser/viewuser.component';
 import { CreateuserComponent } from './user/createuser/createuser.component';
+
 
 const routes: Routes = [
   { path:'customers', component:ViewcustomerComponent},
@@ -15,6 +17,7 @@ const routes: Routes = [
   { path:'activities', component:ViewactivityComponent},
   { path:'createactivity', component:CreateactivityComponent},
   { path:'editactivity/:id', component:EditactivityComponent},
+  { path:'users', component:ViewuserComponent},
   { path:'createuser', component:CreateuserComponent}
 ];
 
