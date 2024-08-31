@@ -22,16 +22,7 @@ export class ViewcustomerComponent implements OnInit{
     this.loadCustomers();
   }
 
-  // loadCustomers(): void {
-  //   this.customerService.getCustomers().subscribe(
-  //     (data: Customer[]) => {
-  //       this.customers = data;
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching customers:', error);
-  //     }
-  //   );
-  // }
+
 
 
   loadCustomers(): void {
@@ -67,38 +58,4 @@ export class ViewcustomerComponent implements OnInit{
     }
   }
   
-
-  // deleteCustomer(id: number): void {
-  //   if (confirm('Are you sure you want to delete this customer?')) {
-  //     this.customerService.deleteCustomer(id).subscribe(
-  //       () => {
-  //         console.log(`Customer with ID ${id} deleted successfully`);
-  //         this.customers = this.customers.filter(customer => customer.id !== id);
-  //       },
-  //       (error) => {
-  //         console.error('Error deleting customer:', error);
-  //       }
-  //     );
-  //   }
-  // }
-
-  
-  
-
-  // customers: Customer[] = [];
-
-  // constructor(private customerService: CustomerService) {}
-
-  // ngOnInit(): void {
-  //   this.customerService.getCustomers().subscribe(
-  //     (data: Customer[]) => {
-  //       this.customers = data;
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching customers:', error);
-  //     }
-  //   );
-  // }
-  
-
 }

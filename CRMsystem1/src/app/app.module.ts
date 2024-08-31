@@ -15,6 +15,10 @@ import { ViewactivityComponent } from './activity/viewactivity/viewactivity.comp
 import { EditactivityComponent } from './activity/editactivity/editactivity.component';
 import { CreateuserComponent } from './user/createuser/createuser.component';
 import { ViewuserComponent } from './user/viewuser/viewuser.component';
+import { UpdateuserComponent } from './user/updateuser/updateuser.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './loginregistration/login/login.component';
+import { RegistrationComponent } from './loginregistration/registration/registration.component';
 
 
 @NgModule({
@@ -29,6 +33,10 @@ import { ViewuserComponent } from './user/viewuser/viewuser.component';
     EditactivityComponent,
     CreateuserComponent,
     ViewuserComponent,
+    UpdateuserComponent,
+    DashboardComponent,
+    LoginComponent,
+    RegistrationComponent,
     
   ],
   imports: [

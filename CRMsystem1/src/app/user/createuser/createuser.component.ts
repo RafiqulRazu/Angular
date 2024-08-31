@@ -1,55 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../../model/user.model';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../../service/user.service';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CustomerService } from '../../service/customer.service';
-import { Customer } from '../../model/customer.model';
+import { Router } from '@angular/router';
+import { User } from '../../model/user.model';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-createuser',
   templateUrl: './createuser.component.html',
   styleUrl: './createuser.component.css'
 })
-export class CreateuserComponent implements OnInit{
+export class CreateuserComponent {
 
-  customerForm: FormGroup;
-  errorMessage: string | null = null;
+  userForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    private customerService: CustomerService,
+    private userService: UserService,
     private router: Router
-  ) {
-    // Initialize the form with validation
-    this.customerForm = this.fb.group({
-      name: ['', Validators.required],
+  ){
+    this.userForm= this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-      company: ['', Validators.required],
-      status: ['Active', Validators.required]
-    });
+      role: ['Admin', Validators.required]
+  });
   }
+  onSubmit() {
+    if (this.userForm.valid) {
+      const newUser: Omit<User, 'id'> = {
+        name: this.userForm.value.name,
+        email: this.userForm.value.email,
+        role: this.userForm.value.role,
+      };
 
-  ngOnInit(): void {}
-
-  onSubmit(): void {
-    if (this.customerForm.valid) {
-      const newCustomer: Customer = this.customerForm.value;
-      this.customerService.createCustomer(newCustomer).subscribe({
-        next: () => {
-          // Redirect to another page or show a success message
-          this.router.navigate(['/view-customers']);
-        },
-        error: (error) => {
-          this.errorMessage = 'Error creating customer. Please try again.';
-          console.error('Error creating customer:', error);
-        }
+      this.userService.createUser(newUser).subscribe(() => {
+        this.router.navigate(['/users']);
       });
-    } else {
-      this.errorMessage = 'Please fill out all required fields.';
     }
+    
   }
-  
-
 }

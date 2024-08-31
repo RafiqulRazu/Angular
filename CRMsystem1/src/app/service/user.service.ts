@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../model/user.model';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:3000/users';
+  private apiUrl = 'http://localhost:3000/user';
 
   constructor(private http:HttpClient) { }
 
@@ -20,23 +20,33 @@ export class UserService {
     return this.http.get<User[]>(this.apiUrl);
   }
 
-  // Get a user by ID
+  
+
+
   getUserById(id: number): Observable<User> {
-    return this.http.get<User>(`${this.apiUrl}/${id}`);
+    return this.http.get<User>(`${this.apiUrl}/${id}`).pipe(
+      catchError(error => {
+        console.error('Error fetching user by ID:', error);
+        return throwError(() => new Error('Error fetching user'));
+      })
+    );
   }
 
-  // Create a new user
-  createUser(user: User): Observable<User> {
+  
+  createUser(user: Omit<User, 'id'>): Observable<User> {
     return this.http.post<User>(this.apiUrl, user);
   }
 
-  // Update an existing user
-  updateUser(user: User): Observable<User> {
-    return this.http.put<User>(`${this.apiUrl}/${user.id}`, user);
+
+  updateUser(id: number, user: User): Observable<User> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<User>(url, user);
   }
 
-  // Delete a user
+
   deleteUser(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<void>(url);
   }
+  
 }

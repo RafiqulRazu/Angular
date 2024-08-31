@@ -9,6 +9,7 @@
             <th>Date</th>
             <th>Description</th>
             <th>Customer Name</th>
+            <th>User Name</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -19,6 +20,7 @@
             <td>{{ activity.date | date: 'short' }}</td>
             <td>{{ activity.description }}</td>
             <td>{{ activity.customer.name }}</td>
+            <td>{{ activity.user.name }}</td>
             <td>
               <button class="btn btn-primary btn-sm mr-2" (click)="editActivity(activity.id)">Edit</button>
               <button class="btn btn-danger btn-sm" (click)="deleteActivity(activity.id)">Delete</button>

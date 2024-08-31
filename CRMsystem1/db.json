@@ -1,16 +1,6 @@
 {
   "customer": [
     {
-      "id": "2",
-      "name": "Peter",
-      "email": "johndoe@example.com",
-      "phone": "426-7370",
-      "company": "Apple Inc.",
-      "status": "Prospect",
-      "createdAt": null,
-      "updatedAt": "2024-08-28T00:34:09.223Z"
-    },
-    {
       "id": "3",
       "name": "Razu",
       "email": "razu@gmail.com",
@@ -49,6 +39,58 @@
       "status": "Lead",
       "createdAt": "2024-08-29T11:25:03.408Z",
       "updatedAt": "2024-08-29T11:25:03.408Z"
+    },
+    {
+      "id": "7158",
+      "name": "Chatgpt",
+      "email": "cg@gmail.com",
+      "phone": "436-6792",
+      "company": "acer",
+      "status": "Active",
+      "createdAt": "2024-08-29T21:45:14.648Z",
+      "updatedAt": "2024-08-29T21:45:14.648Z"
+    },
+    {
+      "id": "cb1b",
+      "name": "rubel",
+      "email": "rubel@gmail.com",
+      "phone": "235-6582",
+      "company": "nokia",
+      "status": "Active",
+      "createdAt": "2024-08-30T16:10:20.305Z",
+      "updatedAt": "2024-08-30T16:10:20.305Z"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "rafiqul",
+      "email": "rafiqul@gmail.com",
+      "role": "Agent"
+    },
+    {
+      "id": "719c",
+      "name": "eyrf",
+      "email": "jdrfg@hthh.jdf",
+      "role": "salesexecutive"
+    },
+    {
+      "id": "575b",
+      "name": "Orangutan",
+      "email": "orangutan@gmail.com",
+      "role": "admin"
+    },
+    {
+      "id": "d99d",
+      "name": "Chimpanzee",
+      "email": "chimpanzee@gmail.com",
+      "role": "sales executive"
+    },
+    {
+      "id": "ad98",
+      "name": "Gorilla",
+      "email": "gorilla@gmail.com",
+      "role": "agent"
     }
   ],
   "activities": [
@@ -66,29 +108,49 @@
         "status": "Lead",
         "createdAt": "2024-08-27T22:07:03.792Z",
         "updatedAt": "2024-08-27T22:07:03.792Z"
+      },
+      "user": {
+        "id": "3d8f",
+        "name": "erhfsh",
+        "email": "tky@rtju.u",
+        "role": "sales executive"
       }
     },
     {
-      "id": "4e50",
+      "id": "6914",
       "type": "Meeting",
-      "date": "2024-08-28T06:03",
-      "description": "for official work",
+      "date": "2024-08-31T03:17",
+      "description": "allah tumi deikho",
       "customer": {
-        "id": "fbac",
-        "name": "cathrine",
-        "email": "cat@gmail.com",
-        "phone": "981-7523",
-        "company": "ytrg",
-        "status": "Lead",
-        "createdAt": "2024-08-27T22:07:03.792Z",
-        "updatedAt": "2024-08-27T22:07:03.792Z"
+        "id": "7158",
+        "name": "Chatgpt",
+        "email": "cg@gmail.com",
+        "phone": "436-6792",
+        "company": "acer",
+        "status": "Active",
+        "createdAt": "2024-08-29T21:45:14.648Z",
+        "updatedAt": "2024-08-29T21:45:14.648Z"
+      },
+      "user": "rafiqul"
+    },
+    {
+      "id": "4ac1",
+      "type": "Meeting",
+      "date": "2024-08-31T03:17",
+      "description": "allah tumi deikho",
+      "customer": "Chatgpt",
+      "user": {
+        "id": "1",
+        "name": "rafiqul",
+        "email": "rafiqul@gmail.com",
+        "role": "Agent"
       }
     },
     {
-      "id": "bbdb",
+      "id": "c6c6",
       "type": "Email",
-      "date": "2024-07-31T14:06",
-      "description": "important work",
+      "date": "2024-08-31T03:22",
+      "description": "dvrtiusreea",
       "customer": {
         "id": "4d78",
         "name": "johan",
@@ -98,53 +160,21 @@
         "status": "Lead",
         "createdAt": "2024-08-27T21:28:36.551Z",
         "updatedAt": "2024-08-27T21:28:36.551Z"
-      }
+      },
+      "user": "eyrf"
     },
     {
-      "id": "55bc",
-      "type": "Meeting",
-      "date": "2024-08-29T17:25",
-      "description": "rthrtyhrtef",
-      "customer": {
-        "id": "8612",
-        "name": "rafiqul",
-        "email": "cat@gmail.com",
-        "phone": "533-2359",
-        "company": "sony",
-        "status": "Lead",
-        "createdAt": "2024-08-29T11:25:03.408Z",
-        "updatedAt": "2024-08-29T11:25:03.408Z"
+      "id": "d5cf",
+      "type": "Email",
+      "date": "2024-08-31T03:22",
+      "description": "dvrtiusreea",
+      "customer": "johan",
+      "user": {
+        "id": "719c",
+        "name": "eyrf",
+        "email": "jdrfg@hthh.jdf",
+        "role": "salesexecutive"
       }
-    }
-  ],
-  "users": [
-    {
-      "id": "0",
-      "name": "Rir",
-      "email": "r@g.com",
-      "role": "Agent",
-      "customer": [
-        {
-          "id": 101,
-          "name": "Customer 1",
-          "email": "customer1@example.com",
-          "phone": "555-1234",
-          "company": "Company A",
-          "status": "Active",
-          "createdAt": "2023-01-01T00:00:00Z",
-          "updatedAt": "2023-01-01T00:00:00Z"
-        },
-        {
-          "id": 102,
-          "name": "Customer 2",
-          "email": "customer2@example.com",
-          "phone": "555-5678",
-          "company": "Company B",
-          "status": "Inactive",
-          "createdAt": "2023-02-01T00:00:00Z",
-          "updatedAt": "2023-02-01T00:00:00Z"
-        }
-      ]
     }
   ]
 }

@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Update User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" class="form-control"/>
+        <div *ngIf="userForm.get('name')?.invalid && (userForm.get('name')?.touched || userForm.dirty)" class="error">
+          <div *ngIf="userForm.get('name')?.errors?.['required']">Name is required.</div>
+          <div *ngIf="userForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" class="form-control"/>
+        <div *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.touched || userForm.dirty)" class="error">
+          <div *ngIf="userForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <select id="role" formControlName="role" class="form-control">
+          <option value="admin">Admin</option>
+          <option value="salesexecutive">Sales Executive</option>
+          <option value="agent">Agent</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update Customer</button>
+      </div>
+    </form>
+  </div>
+  

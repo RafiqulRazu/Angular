@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { Activity } from '../../model/activity.model';
 import { Customer } from '../../model/customer.model';
 import { CustomerService } from '../../service/customer.service';
+import { User } from '../../model/user.model';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-createactivity',
@@ -14,24 +16,31 @@ import { CustomerService } from '../../service/customer.service';
 export class CreateactivityComponent {
   activityForm: FormGroup;
   customers: Customer[] = [];
+  users: User[] = [];
 
   constructor(
     private fb: FormBuilder,
     private activityService: ActivityService,
     private customerService: CustomerService,
+    private userService: UserService,
     private router: Router
   ) {
     this.activityForm = this.fb.group({
       type: ['Call', Validators.required],
       date: ['', Validators.required],
       description: ['', Validators.required],
-      customer: ['', Validators.required]  // Only storing the customer ID or name
+      customer: ['', Validators.required],  // Only storing the customer ID or name
+      user: ['', Validators.required]
     });
   }
 
   ngOnInit(): void {
     this.customerService.getCustomers().subscribe((data: Customer[]) => {
       this.customers = data;
+    });
+
+    this.userService.getUsers().subscribe((data: User[]) => {
+      this.users = data;
     });
   }
 
@@ -49,40 +58,22 @@ export class CreateactivityComponent {
         });
       }
     }
+
+    if (this.activityForm.valid) {
+      const selectedUser = this.users.find(u => u.name === this.activityForm.value.user);
+      if (selectedUser) {
+        const newActivity: Activity = {
+          ...this.activityForm.value,
+          user: selectedUser  
+        };
+
+        this.activityService.createActivity(newActivity).subscribe(() => {
+          this.router.navigate(['/activities']);
+        });
+      }
+    }
   }
 
-  // activityForm: FormGroup;
 
-  // constructor(
-  //   private fb: FormBuilder,
-  //   private activityService: ActivityService,
-  //   private router: Router
-  // ) {
-  //   this.activityForm = this.fb.group({
-  //     type: ['Call', Validators.required],
-  //     date: ['', Validators.required],
-  //     description: ['', Validators.required],
-  //     customer: this.fb.group({
-  //       id: ['', Validators.required],
-  //       name: ['', Validators.required],
-  //       email: ['', [Validators.required, Validators.email]],
-  //       phone: ['', Validators.required],
-  //       company: ['', Validators.required],
-  //       status: ['Lead', Validators.required],
-  //       createdAt: ['', Validators.required],
-  //       updatedAt: ['', Validators.required],
-  //     }),
-  //   });
-  // }
-
-  // onSubmit(): void {
-  //   if (this.activityForm.valid) {
-  //     const newActivity: Activity = this.activityForm.value;
-
-  //     this.activityService.createActivity(newActivity).subscribe(() => {
-  //       this.router.navigate(['/activities']);
-  //     });
-  //   }
-  // }
-
+  
 }

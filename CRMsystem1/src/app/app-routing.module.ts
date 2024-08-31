@@ -8,6 +8,7 @@ import { ViewactivityComponent } from './activity/viewactivity/viewactivity.comp
 import { EditactivityComponent } from './activity/editactivity/editactivity.component';
 import { ViewuserComponent } from './user/viewuser/viewuser.component';
 import { CreateuserComponent } from './user/createuser/createuser.component';
+import { UpdateuserComponent } from './user/updateuser/updateuser.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path:'createactivity', component:CreateactivityComponent},
   { path:'editactivity/:id', component:EditactivityComponent},
   { path:'users', component:ViewuserComponent},
-  { path:'createuser', component:CreateuserComponent}
+  { path:'createuser', component:CreateuserComponent},
+  { path:'updateuser/:id', component:UpdateuserComponent}
 ];
 
 @NgModule({

@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Activity } from '../../model/activity.model';
 import { Customer } from '../../model/customer.model';
 import { CustomerService } from '../../service/customer.service';
+import { User } from '../../model/user.model';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-editactivity',
@@ -17,13 +19,15 @@ export class EditactivityComponent implements OnInit{
   activityForm!: FormGroup;
   activityId!: number;
   customers: Customer[] = [];
+  users: User[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private activityService: ActivityService,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private userService: UserService,
   ) {}
 
   ngOnInit(): void {
@@ -42,9 +46,16 @@ export class EditactivityComponent implements OnInit{
         status: ['', Validators.required],
         createdAt: [''],
         updatedAt: ['']
+      }),
+      user: this.formBuilder.group({
+        id: ['', Validators.required],
+        name: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        role: ['', Validators.required],
       })
     });
 
+    this.loadUsers()
     this.loadCustomers();
     this.loadActivity();
   }
@@ -60,6 +71,17 @@ export class EditactivityComponent implements OnInit{
     });
   }
 
+  loadUsers(): void {
+    this.userService.getUsers().subscribe({
+      next: (data: User[]) => {
+        this.users = data;
+      },
+      error: err => {
+        console.error('Error loading customers:', err);
+      }
+    });
+  }
+
   loadActivity(): void {
     this.activityService.getActivityById(this.activityId).subscribe({
       next: (activity: Activity) => {
@@ -67,7 +89,8 @@ export class EditactivityComponent implements OnInit{
           type: activity.type,
           date: activity.date,
           description: activity.description,
-          customer: activity.customer
+          customer: activity.customer,
+          user: activity.user
         });
       },
       error: err => {
