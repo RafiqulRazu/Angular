@@ -66,31 +66,8 @@
       "id": "1",
       "name": "rafiqul",
       "email": "rafiqul@gmail.com",
+      "password": "1234",
       "role": "Agent"
-    },
-    {
-      "id": "719c",
-      "name": "eyrf",
-      "email": "jdrfg@hthh.jdf",
-      "role": "salesexecutive"
-    },
-    {
-      "id": "575b",
-      "name": "Orangutan",
-      "email": "orangutan@gmail.com",
-      "role": "admin"
-    },
-    {
-      "id": "d99d",
-      "name": "Chimpanzee",
-      "email": "chimpanzee@gmail.com",
-      "role": "sales executive"
-    },
-    {
-      "id": "ad98",
-      "name": "Gorilla",
-      "email": "gorilla@gmail.com",
-      "role": "agent"
     }
   ],
   "activities": [
@@ -117,10 +94,32 @@
       }
     },
     {
-      "id": "6914",
-      "type": "Meeting",
-      "date": "2024-08-31T03:17",
-      "description": "allah tumi deikho",
+      "id": "e0bd",
+      "type": "Email",
+      "date": "2024-08-11T16:16",
+      "description": "LMAO",
+      "customer": {
+        "id": "3",
+        "name": "Razu",
+        "email": "razu@gmail.com",
+        "phone": "543-6832",
+        "company": "bata",
+        "status": "Prospect",
+        "createdAt": null,
+        "updatedAt": "2024-08-28T17:33:47.893Z"
+      },
+      "user": {
+        "id": "ad98",
+        "name": "Gorilla",
+        "email": "gorilla@gmail.com",
+        "role": "agent"
+      }
+    },
+    {
+      "id": "af1b",
+      "type": "Email",
+      "date": "2024-08-31T16:41",
+      "description": "done",
       "customer": {
         "id": "7158",
         "name": "Chatgpt",
@@ -131,49 +130,11 @@
         "createdAt": "2024-08-29T21:45:14.648Z",
         "updatedAt": "2024-08-29T21:45:14.648Z"
       },
-      "user": "rafiqul"
-    },
-    {
-      "id": "4ac1",
-      "type": "Meeting",
-      "date": "2024-08-31T03:17",
-      "description": "allah tumi deikho",
-      "customer": "Chatgpt",
       "user": {
-        "id": "1",
-        "name": "rafiqul",
-        "email": "rafiqul@gmail.com",
-        "role": "Agent"
-      }
-    },
-    {
-      "id": "c6c6",
-      "type": "Email",
-      "date": "2024-08-31T03:22",
-      "description": "dvrtiusreea",
-      "customer": {
-        "id": "4d78",
-        "name": "johan",
-        "email": "johan@gmail.com",
-        "phone": "234-8655",
-        "company": "adidas",
-        "status": "Lead",
-        "createdAt": "2024-08-27T21:28:36.551Z",
-        "updatedAt": "2024-08-27T21:28:36.551Z"
-      },
-      "user": "eyrf"
-    },
-    {
-      "id": "d5cf",
-      "type": "Email",
-      "date": "2024-08-31T03:22",
-      "description": "dvrtiusreea",
-      "customer": "johan",
-      "user": {
-        "id": "719c",
-        "name": "eyrf",
-        "email": "jdrfg@hthh.jdf",
-        "role": "salesexecutive"
+        "id": "d99d",
+        "name": "Chimpanzee",
+        "email": "chimpanzee@gmail.com",
+        "role": "sales executive"
       }
     }
   ]

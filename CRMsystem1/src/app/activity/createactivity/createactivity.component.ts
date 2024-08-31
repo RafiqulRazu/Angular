@@ -47,31 +47,22 @@ export class CreateactivityComponent {
   onSubmit(): void {
     if (this.activityForm.valid) {
       const selectedCustomer = this.customers.find(c => c.name === this.activityForm.value.customer);
-      if (selectedCustomer) {
-        const newActivity: Activity = {
-          ...this.activityForm.value,
-          customer: selectedCustomer  // Linking the selected customer
-        };
-
-        this.activityService.createActivity(newActivity).subscribe(() => {
-          this.router.navigate(['/activities']);
-        });
-      }
-    }
-
-    if (this.activityForm.valid) {
       const selectedUser = this.users.find(u => u.name === this.activityForm.value.user);
-      if (selectedUser) {
+      if (selectedCustomer && selectedUser) {
         const newActivity: Activity = {
           ...this.activityForm.value,
-          user: selectedUser  
+          customer: selectedCustomer,
+          user: selectedUser
         };
 
         this.activityService.createActivity(newActivity).subscribe(() => {
           this.router.navigate(['/activities']);
         });
+      } else {
+        alert('Please select both user and customer')
       }
     }
+
   }
 
 
