@@ -75,6 +75,19 @@
       "email": "rir@gmail.com",
       "password": "123456789",
       "role": "Admin"
+    },
+    {
+      "id": "a4fd",
+      "name": "Cat",
+      "email": "cat@gmail.com",
+      "password": "123",
+      "role": "Agent"
+    },
+    {
+      "id": "cae1",
+      "name": "razu",
+      "email": "test@gmail.com",
+      "role": "agent"
     }
   ],
   "activities": [
