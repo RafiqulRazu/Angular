@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+
 import { User } from '../../model/user.model';
 import { UserService } from '../../service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createuser',
@@ -29,6 +30,7 @@ export class CreateuserComponent {
       const newUser: Omit<User, 'id'> = {
         name: this.userForm.value.name,
         email: this.userForm.value.email,
+        password: this.userForm.value.password,
         role: this.userForm.value.role,
       };
 

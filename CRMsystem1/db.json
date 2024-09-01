@@ -63,11 +63,18 @@
   ],
   "user": [
     {
-      "id": "1",
-      "name": "rafiqul",
-      "email": "rafiqul@gmail.com",
+      "id": "eb35",
+      "name": "tettre",
+      "email": "wett@reh.dfr",
       "password": "1234",
-      "role": "Agent"
+      "role": "Admin"
+    },
+    {
+      "id": "cd5e",
+      "name": "Rafiqul Razu",
+      "email": "rir@gmail.com",
+      "password": "123456789",
+      "role": "Admin"
     }
   ],
   "activities": [

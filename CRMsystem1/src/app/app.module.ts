@@ -8,7 +8,6 @@ import { CreatecustomerComponent } from './customer/createcustomer/createcustome
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewcustomerComponent } from './customer/viewcustomer/viewcustomer.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { UpdatecustomerComponent } from './customer/updatecustomer/updatecustomer.component';
 import { CreateactivityComponent } from './activity/createactivity/createactivity.component';
 import { ViewactivityComponent } from './activity/viewactivity/viewactivity.component';
@@ -19,6 +18,8 @@ import { UpdateuserComponent } from './user/updateuser/updateuser.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './loginregistration/login/login.component';
 import { RegistrationComponent } from './loginregistration/registration/registration.component';
+import { RouterModule } from '@angular/router';
+import { LogoutComponent } from './loginregistration/logout/logout.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { RegistrationComponent } from './loginregistration/registration/registra
     DashboardComponent,
     LoginComponent,
     RegistrationComponent,
+    LogoutComponent,
     
   ],
   imports: [
