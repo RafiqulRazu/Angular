@@ -20,6 +20,7 @@ import { LoginComponent } from './loginregistration/login/login.component';
 import { RegistrationComponent } from './loginregistration/registration/registration.component';
 import { RouterModule } from '@angular/router';
 import { LogoutComponent } from './loginregistration/logout/logout.component';
+import { UserprofileComponent } from './user/userprofile/userprofile.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { LogoutComponent } from './loginregistration/logout/logout.component';
     LoginComponent,
     RegistrationComponent,
     LogoutComponent,
+    UserprofileComponent,
     
   ],
   imports: [

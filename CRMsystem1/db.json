@@ -1,14 +1,14 @@
 {
   "customer": [
     {
-      "id": "3",
       "name": "Razu",
       "email": "razu@gmail.com",
       "phone": "543-6832",
       "company": "bata",
       "status": "Prospect",
+      "id": "3",
       "createdAt": null,
-      "updatedAt": "2024-08-28T17:33:47.893Z"
+      "updatedAt": "2024-09-01T20:31:50.842Z"
     },
     {
       "id": "4d78",
@@ -31,14 +31,14 @@
       "updatedAt": "2024-08-27T22:07:03.792Z"
     },
     {
-      "id": "8612",
-      "name": "rafiqul",
-      "email": "cat@gmail.com",
-      "phone": "533-2359",
+      "name": "Avijit",
+      "email": "avijit@gmail.com",
+      "phone": "533-1231",
       "company": "sony",
-      "status": "Lead",
-      "createdAt": "2024-08-29T11:25:03.408Z",
-      "updatedAt": "2024-08-29T11:25:03.408Z"
+      "status": "Prospect",
+      "id": "8612",
+      "createdAt": null,
+      "updatedAt": "2024-09-01T23:35:53.247Z"
     },
     {
       "id": "7158",
@@ -51,110 +51,61 @@
       "updatedAt": "2024-08-29T21:45:14.648Z"
     },
     {
-      "id": "cb1b",
-      "name": "rubel",
-      "email": "rubel@gmail.com",
-      "phone": "235-6582",
-      "company": "nokia",
+      "id": "5da7",
+      "name": "Rifat",
+      "email": "rifat@gmail.com",
+      "phone": "785-5432",
+      "company": "twitter",
       "status": "Active",
-      "createdAt": "2024-08-30T16:10:20.305Z",
-      "updatedAt": "2024-08-30T16:10:20.305Z"
+      "createdAt": "2024-09-01T23:38:40.864Z",
+      "updatedAt": "2024-09-01T23:38:40.864Z"
     }
   ],
   "user": [
     {
-      "id": "eb35",
-      "name": "tettre",
-      "email": "wett@reh.dfr",
-      "password": "1234",
+      "id": "9583",
+      "name": "Razu",
+      "email": "razu@gmail.com",
+      "password": "123",
       "role": "Admin"
     },
     {
-      "id": "cd5e",
+      "id": "d4b6",
+      "name": "Rafiqul",
+      "email": "r@gmail.com",
+      "password": "456",
+      "role": "Sales Executive"
+    },
+    {
+      "id": "64c5",
       "name": "Rafiqul Razu",
       "email": "rir@gmail.com",
-      "password": "123456789",
-      "role": "Admin"
-    },
-    {
-      "id": "a4fd",
-      "name": "Cat",
-      "email": "cat@gmail.com",
-      "password": "123",
+      "password": "789",
       "role": "Agent"
-    },
-    {
-      "id": "cae1",
-      "name": "razu",
-      "email": "test@gmail.com",
-      "role": "agent"
     }
   ],
   "activities": [
     {
-      "id": "1",
-      "type": "Call",
-      "date": "2024-08-27T10:30:00.000Z",
-      "description": "Discussed project requirements.",
+      "id": "62e6",
+      "type": "Meeting",
+      "date": "2024-09-02T05:32",
+      "description": "official",
       "customer": {
-        "id": "fbac",
-        "name": "cathrine",
-        "email": "cat@gmail.com",
-        "phone": "981-7523",
-        "company": "ytrg",
+        "id": "4d78",
+        "name": "johan",
+        "email": "johan@gmail.com",
+        "phone": "234-8655",
+        "company": "adidas",
         "status": "Lead",
-        "createdAt": "2024-08-27T22:07:03.792Z",
-        "updatedAt": "2024-08-27T22:07:03.792Z"
+        "createdAt": "2024-08-27T21:28:36.551Z",
+        "updatedAt": "2024-08-27T21:28:36.551Z"
       },
       "user": {
-        "id": "3d8f",
-        "name": "erhfsh",
-        "email": "tky@rtju.u",
-        "role": "sales executive"
-      }
-    },
-    {
-      "id": "e0bd",
-      "type": "Email",
-      "date": "2024-08-11T16:16",
-      "description": "LMAO",
-      "customer": {
-        "id": "3",
-        "name": "Razu",
-        "email": "razu@gmail.com",
-        "phone": "543-6832",
-        "company": "bata",
-        "status": "Prospect",
-        "createdAt": null,
-        "updatedAt": "2024-08-28T17:33:47.893Z"
-      },
-      "user": {
-        "id": "ad98",
-        "name": "Gorilla",
-        "email": "gorilla@gmail.com",
-        "role": "agent"
-      }
-    },
-    {
-      "id": "af1b",
-      "type": "Email",
-      "date": "2024-08-31T16:41",
-      "description": "done",
-      "customer": {
-        "id": "7158",
-        "name": "Chatgpt",
-        "email": "cg@gmail.com",
-        "phone": "436-6792",
-        "company": "acer",
-        "status": "Active",
-        "createdAt": "2024-08-29T21:45:14.648Z",
-        "updatedAt": "2024-08-29T21:45:14.648Z"
-      },
-      "user": {
-        "id": "d99d",
-        "name": "Chimpanzee",
-        "email": "chimpanzee@gmail.com",
-        "role": "sales executive"
+        "id": "64c5",
+        "name": "Rafiqul Razu",
+        "email": "rir@gmail.com",
+        "password": "789",
+        "role": "Agent"
       }
     }
   ]

@@ -1,0 +1,23 @@
+.square-card {
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Ensure the card is square */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px; /* Optional: adds slight rounding to corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  margin: 0 auto; /* Centers the card horizontally */
+}
+
+.card-header {
+  background-color: #f8f9fa; /* Light grey background for the header */
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+  

@@ -14,12 +14,14 @@ import { LoginComponent } from './loginregistration/login/login.component';
 import { AuthGuard } from './loginregistration/guard/authguard.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LogoutComponent } from './loginregistration/logout/logout.component';
+import { UserprofileComponent } from './user/userprofile/userprofile.component';
+import { RoleGuard } from './loginregistration/guard/role.guard';
 
 
 
 const routes: Routes = [
   { path:'customers', component:ViewcustomerComponent},
-  { path:'createcustomers', component:CreatecustomerComponent, canActivate:[AuthGuard]},
+  { path:'createcustomers', component:CreatecustomerComponent, canActivate:[AuthGuard, ]},
   { path:'updatecustomer/:id', component:UpdatecustomerComponent, canActivate:[AuthGuard]},
   { path:'activities', component:ViewactivityComponent},
   { path:'createactivity', component:CreateactivityComponent},
@@ -30,7 +32,11 @@ const routes: Routes = [
   { path:'registration', component:RegistrationComponent},
   { path:'login', component:LoginComponent},
   { path:'logout', component:LogoutComponent},
-  { path:'dashboard', component:DashboardComponent}
+  { path:'dashboard', component:DashboardComponent},
+  { path: 'userprofile', component:UserprofileComponent,
+    data:{role: ['Admin', 'Agent']}
+  },
+  { path:'**', redirectTo:'login', pathMatch:'full'},
 ];
 
 @NgModule({
