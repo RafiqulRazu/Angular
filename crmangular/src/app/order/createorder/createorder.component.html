@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <h2>Create Order</h2>
+    
+    <form [formGroup]="formValue" (ngSubmit)="createOrder()">
+        <!-- Lead (Customer) Selection -->
+        <div class="form-group">
+          <label for="lead">Customer</label>
+          <select formControlName="lead" class="form-control" id="lead">
+            <option *ngFor="let lead of leads" [value]="lead">{{ lead.activity.customer.name }}</option>
+          </select>
+        </div>      
+  
+      <!-- Product Selection -->
+      <div class="form-group mt-3">
+        <label for="product">Product</label>
+        <select formControlName="product" class="form-control" id="product">
+          <option *ngFor="let product of products" [value]="product">{{ product.name }}</option>
+        </select>
+      </div>
+  
+      <!-- Order Date -->
+      <div class="form-group mt-3">
+        <label for="orderDate">Order Date</label>
+        <input type="date" formControlName="orderDate" class="form-control" id="orderDate">
+      </div>
+  
+      <!-- Quantity -->
+      <div class="form-group mt-3">
+        <label for="quantity">Quantity</label>
+        <input type="number" formControlName="quantity" class="form-control" id="quantity" min="1">
+      </div>
+  
+      <!-- Status -->
+      <div class="form-group mt-3">
+        <label for="status">Status</label>
+        <select formControlName="status" class="form-control" id="status">
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group mt-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!formValue.valid">Create Order</button>
+      </div>
+    </form>
+  </div>
+  

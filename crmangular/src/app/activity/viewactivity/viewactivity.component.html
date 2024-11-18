@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <h2 class="text-center">Activity List</h2>
+    
+    <!-- Display loading message if no activities are loaded yet -->
+    <div *ngIf="!activities.length" class="alert alert-info text-center" role="alert">
+      No activities found. Add some activities!
+    </div>
+  
+    <!-- Table to display activities -->
+    <table class="table table-striped mt-3" *ngIf="activities.length">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Activity Type</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">Customer</th>
+          <th scope="col">Agent</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ activity.activityType }}</td>
+          <td>{{ activity.description }}</td>
+          <td>{{ activity.activityDate | date: 'shortDate' }}</td>
+          <td>{{ activity.customer.name }}</td>
+          <td>{{ activity.agent.name }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm me-2" (click)="editActivity(activity.id)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteActivity(activity.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- Button to navigate to the Create Activity page -->
+    <div class="text-center mt-4">
+      <a class="btn btn-success" routerLink="/createact">Add New Activity</a>
+    </div>
+  </div>
+  

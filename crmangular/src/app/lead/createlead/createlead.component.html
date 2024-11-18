@@ -1,0 +1,91 @@
+<div class="container">
+    <h2>Create Lead</h2>
+    <form [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+
+        <!-- Activity Selection -->
+        <div class="form-group">
+            <label for="activity">Customer Name</label>
+            <select id="activity" formControlName="activity" class="form-control">
+                <option *ngFor="let activity of activities" [value]="activity.id">{{ activity.customer.name }}</option>
+            </select>
+        </div>
+
+        <!-- Sales Executive Selection -->
+        <div class="form-group">
+            <label for="salesExecutive">Assign To</label>
+            <select id="salesExecutive" formControlName="salesExecutiveId" class="form-control">
+                <option *ngFor="let executive of salesExecutives" [value]="executive.id">{{ executive.name }}</option>
+            </select>
+        </div>
+
+        <!-- Status Input -->
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="text" id="status" formControlName="status" class="form-control" placeholder="Enter lead status" required />
+        </div>
+
+        <!-- Created At Date -->
+        <div class="form-group">
+            <label for="createdAt">Created At:</label>
+            <input type="date" id="createdAt" formControlName="createdAt" class="form-control" required />
+        </div>
+
+        <!-- Updated At Date -->
+        <!-- <div class="form-group">
+            <label for="updatedAt">Updated At:</label>
+            <input type="date" id="updatedAt" formControlName="updatedAt" class="form-control" required />
+        </div> -->
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn">Create Lead</button>
+    </form>
+</div>
+
+
+
+
+
+<!-- 
+
+<div class="container">
+    <h2>Create Lead</h2>
+    <form [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="activityType">Activity Type</label>
+        <select formControlName="activityType" class="form-control" id="activityType">
+          <option value="Call">Call</option>
+          <option value="Email">Email</option>
+          <option value="Meeting">Meeting</option>
+          <option value="Follow-up">Follow-up</option>
+
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="activityDate">Activity Date</label>
+        <input type="date" formControlName="activityDate" class="form-control" id="activityDate">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea formControlName="description" class="form-control" id="description" rows="3"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="customer">Customer</label>
+        <select formControlName="customer" class="form-control" id="customer">
+          <option *ngFor="let customer of customers" [value]="customer.id">{{ customer.name }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="salesExecutive">Sales Executive</label>
+        <select formControlName="salesExecutive" class="form-control" id="salesExecutive">
+          <option *ngFor="let executive of salesExecutives" [value]="executive.id">{{ executive.name }}</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Create Lead</button>
+    </form>
+  </div> -->
+  

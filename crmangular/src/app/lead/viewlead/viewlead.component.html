@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Leads</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Activity</th>
+        <th>Sales Executive</th>
+        <th>Status</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lead of leads">
+        <td>{{ lead.id }}</td>
+        <td>{{ lead.activity.description }}</td> <!-- Assuming 'description' is a property of ActivityModel -->
+        <td>{{ lead.salesExecutive.name }}</td>  <!-- Assuming 'name' is a property of UserModel -->
+        <td>{{ lead.status }}</td>
+        <td>{{ lead.createdAt | date:'short' }}</td>
+        <td>{{ lead.updatedAt | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

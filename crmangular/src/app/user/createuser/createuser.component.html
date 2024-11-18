@@ -1,0 +1,50 @@
+<div class="container bg-category-form">
+  <h1 class="text-center">Add User</h1>
+  <form [formGroup]="formValue">
+    <!-- Name Field -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+
+    <!-- Email Field -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+    </div>
+
+    <!-- Phone Field -->
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="number" class="form-control" id="phone" formControlName="phone">
+    </div>
+
+    <!-- Role Dropdown -->
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select id="role" class="form-control" formControlName="role">
+        <option value="ADMIN">Admin</option>
+        <option value="AGENT">Agent</option>
+        <option value="SALES_EXECUTIVE">Sales Executive</option>
+      </select>
+    </div>
+
+    <!-- Status Dropdown -->
+    <!-- <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" class="form-control" formControlName="status">
+        <option value="ACTIVE">Active</option>
+        <option value="INACTIVE">Inactive</option>
+      </select>
+    </div> -->
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" (click)="createUser()">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="container bg-category-table">
+  <h1 class="text-center">USER LIST</h1>
+
+  <div class="form-group mb-3">
+    <label for="roleSelect">Select Role:</label>
+    <select id="roleSelect" class="form-control" [(ngModel)]="selectedRole" (change)="onRoleChange($event)">
+      <option value="">ROLES</option> <!-- Option to show all roles -->
+      <option *ngFor="let role of role" [value]="role">{{ role }}</option>
+    </select>
+  </div>
+
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <!-- <th>Id</th> -->
+              <th>Name</th>
+              <th>Email</th>
+              <!-- <th>Password</th> -->
+              <th>Phone</th>
+              <th>Role</th>
+              <!-- <th>Status</th> -->
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let u of filteredUsers() ">
+              <!-- <td>{{u.id}}</td> -->
+              <td>{{u.name}}</td>
+              <td>{{u.email}}</td>
+              <!-- <td>{{u.password}}</td> -->
+              <td>{{u.phone}}</td>
+              <td>{{u.role}}</td>
+              <!-- <td>{{category.status}}</td> -->
+              <!-- <td>
+                  <button class="btn btn-warning" (click)="updateCategory(category.id)">Edit</button>
+              </td>
+              <td>
+                  <button class="btn btn-danger" (click)="deleteCategory(category.id)">Delete</button>
+              </td> -->
+          </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 class="text-center">Product List</h2>
+  
+    <div class="d-flex justify-content-between mb-3">
+      <button class="btn btn-primary" (click)="router.navigate(['/createproduct'])">Add New Product</button>
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Unit Price</th>
+          <th>Stock</th>
+          <th>VAT (%)</th>
+          <!-- <th>Status</th> -->
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.unitPrice | currency }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.vat }}</td>
+          <!-- <td>{{ product.status }}</td> -->
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="updateProduct(product.id!)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="products.length === 0" class="alert alert-info text-center">
+      No products available.
+    </div>
+  </div>
+  

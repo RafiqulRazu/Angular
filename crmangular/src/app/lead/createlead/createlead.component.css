@@ -1,0 +1,75 @@
+/* createlead.component.css */
+
+/* Container for the form */
+.container {
+    max-width: 600px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding inside the container */
+    border: 1px solid #ccc; /* Light border around the form */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Heading styling */
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space below each form group */
+}
+
+/* Label styling */
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below the label */
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Input field and textarea styling */
+input.form-control,
+select.form-control,
+textarea.form-control {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding for fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+}
+
+/* Input field focus styling */
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+}
+
+/* Button styling */
+.btn {
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+}
